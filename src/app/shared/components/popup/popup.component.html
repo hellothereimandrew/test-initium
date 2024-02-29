@@ -1,0 +1,12 @@
+<div *ngIf="showPopup" class="background">
+  <div class="popup">
+    <p class="popup-header">Удаление строк</p>
+
+    <p style="margin-bottom: 30px">Удалить выбранные строки(1)?</p>
+
+    <div class="flex-justify-end">
+      <button (click)="showPopup = false">{{ popupData.firstButton }}</button>
+      <button (click)="confirmed()">{{ popupData.secondButton }}</button>
+    </div>
+  </div>
+</div>

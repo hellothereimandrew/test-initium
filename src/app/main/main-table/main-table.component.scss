@@ -1,0 +1,56 @@
+input {
+  margin-right: 15px;
+}
+
+.table {
+  width: 100%;
+  padding: 10px 15px 10px 15px;
+  border-radius: 20px;
+  background-color: #ffffff;
+
+  .buttons {
+    display: flex;
+    align-items: center;
+    height: 56px;
+
+    .add-client,
+    .delete-client {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 40px;
+      height: 40px;
+
+      &:hover {
+        cursor: pointer;
+        background-color: #E2EEFF;
+        border-radius: 100%;
+      }
+    }
+  }
+
+  .sort {
+    display: flex;
+    margin-left: 10px;
+    color: #2F4C97;
+
+    .sort-list {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
+      margin-bottom: 10px;
+    }
+  }
+
+  .client-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin-left: 10px;
+    padding: 10px 0 10px 0;
+    border-top: 1px solid rgba(171, 171, 172, 0.16);
+    border-bottom: 1px solid rgba(171, 171, 172, 0.16);
+  }
+}

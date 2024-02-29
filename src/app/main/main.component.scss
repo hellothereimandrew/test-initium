@@ -1,0 +1,19 @@
+.main {
+  width: 100%;
+  height: 100%;
+  padding: 16px 16px 0 16px;
+  background-color: #E9F3FF;
+
+  .main__header {
+    display: flex;
+    align-items: center;
+    height: 81px;
+    padding-left: 24px;
+    font-size: 28px;
+    font-weight: 500;
+    letter-spacing: 0.15px;
+    font-family: "Roboto-Medium";
+    color: #2F7FD5;
+    background-color: #E9F3FF;
+  }
+}

@@ -1,0 +1,64 @@
+.background {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  background: rgba(38, 50, 56, 0.32);
+
+  .add-form-wrap {
+    width: 448px;
+    border-radius: 20px;
+    padding: 44px 40px 40px 40px;
+    background-color: rgb(255, 255, 255);
+
+    .add-form {
+      .add-form__header {
+        font-family: "Roboto-Medium";
+        font-size: 24px;
+        font-weight: 500;
+        margin-bottom: 40px;
+      }
+
+      .add-form-input-wrap {
+        margin-bottom: 30px;
+
+        .add-form-wrap__input {
+          width: 100%;
+          padding: 17px;
+          border-radius: 4px;
+          outline: 0;
+          border: 1px solid rgba(0, 0, 0, 0.1);
+        }
+      }
+    }
+
+    button {
+      padding: 16px 22px 16px 22px;
+      color: rgba(47, 103, 213, 1);
+      background: none;
+      outline: none;
+      border: 0;
+
+      &:hover {
+        border-radius: 37px;
+        background-color: rgba(47, 103, 213, 1);
+        color: rgb(255, 255, 255);
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+.invalid.ng-touched {
+  border: 1px solid red !important;
+}
+
+.invalid-text {
+  margin: 4px 16px 0 16px;
+  font-size: 12px;
+  text-align: end;
+  color: red;
+}

@@ -1,0 +1,68 @@
+<div *ngIf="showAddClientForm" class="background">
+  <div class="add-form-wrap">
+    <div class="add-form" [formGroup]="form">
+      <div class="add-form__header">Новый клиент</div>
+
+      <div class="add-form-input-wrap">
+        <input
+          class="add-form-wrap__input"
+          type="text"
+          placeholder="Имя"
+          formControlName="name"
+          [required]="true"
+          [ngClass]="{invalid: form.controls.name.invalid}" />
+
+        <p *ngIf="form.controls.name.invalid && this.form.controls.name.touched" class="invalid-text">
+          {{ form.controls.name.value?.length == 0 ? 'Обязательное поле' : 'Минимальное количество символов: 2' }}
+        </p>
+      </div>
+
+      <div class="add-form-input-wrap">
+        <input
+          class="add-form-wrap__input"
+          type="text"
+          placeholder="Фамилия"
+          formControlName="surname"
+          [required]="true"
+          [ngClass]="{invalid: form.controls.surname.invalid}" />
+
+        <p *ngIf="form.controls.surname.invalid && this.form.controls.surname.touched" class="invalid-text">
+          {{ form.controls.surname.value?.length == 0 ? 'Обязательное поле' : 'Минимальное количество символов: 2' }}
+        </p>
+      </div>
+
+      <div class="add-form-input-wrap">
+        <input
+          class="add-form-wrap__input"
+          type="text"
+          placeholder="E-mail"
+          formControlName="email"
+          [required]="true"
+          [ngClass]="{invalid: form.controls.email.invalid}" />
+
+        <p *ngIf="form.controls.email.invalid && this.form.controls.email.touched" class="invalid-text">
+          Некорректный адрес
+        </p>
+      </div>
+
+      <div class="add-form-input-wrap">
+        <input
+          class="add-form-wrap__input"
+          type="text"
+          placeholder="Телефон"
+          formControlName="phone"
+          [required]="true"
+          [ngClass]="{invalid: form.controls.phone.invalid}" />
+
+        <p *ngIf="form.controls.phone.invalid && this.form.controls.phone.touched" class="invalid-text">
+          Некорректный номер телефона
+        </p>
+      </div>
+    </div>
+
+    <div class="flex-justify-end">
+      <button (click)="decline()">Отмена</button>
+      <button (click)="confirm()">Сохранить</button>
+    </div>
+  </div>
+</div>
