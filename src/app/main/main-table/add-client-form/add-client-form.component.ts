@@ -35,9 +35,9 @@ export class AddClientFormComponent {
     checked: new FormControl(false),
   });
 
-  public ngAfterViewChecked() {
-    this.editUser(this.editableUser);
-  }
+  // public ngAfterViewChecked() {
+  //   this.editUser(this.editableUser);
+  // }
 
   public addUser(form: FormGroup): void {
     form = this.form;
